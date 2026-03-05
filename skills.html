@@ -2,67 +2,114 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logan | Skills</title>
 
-<title>Logan | Skills</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <!-- Brand / Logo -->
+        <a class="navbar-brand" href="index.html">Logan</a>
 
-<h1>My Skills</h1>
+        <!-- Hamburger for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="skills.html">Skills</a>
-<a href="contact.html">Contact</a>
-</nav>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="skills.html">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
 
-</header>
+          <!-- Dark/Light Mode Toggle -->
+          <button id="modeToggle" class="btn btn-outline-light ms-3">🌙</button>
+        </div>
+      </div>
+    </nav>
 
-<section>
+    <!-- HERO SECTION -->
+    <div class="container text-center my-5">
+      <h1>My Skills</h1>
+      <p>Projects and technologies that showcase what I can do</p>
+    </div>
+  </header>
 
-<h2>A Show of my skills</h2>
+  <!-- MAIN SKILLS / PROJECTS SECTION -->
+  <section class="container my-5">
 
-<div class="skills">
+    <h2 class="text-center mb-4">A Show of My Skills</h2>
 
-<h3>Java Calculator</h3>
+    <div class="row g-4">
 
-<p>
-A simple calculator program built with Java that performs
-addition, subtraction, multiplication and division.</p>
-  
-<h3>Java ATM</h3>
-<p>A simple java code that replicates the way an ATM operates,
-  through simple statements and a scanner command </p>
-  
+      <!-- Java Calculator -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <h3>Java Calculator</h3>
+          <p>A simple calculator program built with Java that performs addition, subtraction, multiplication, and division.</p>
+        </div>
+      </div>
 
-</div>
+      <!-- Java ATM -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <h3>Java ATM</h3>
+          <p>A Java program that simulates how an ATM operates using statements and Scanner input for deposits, withdrawals, and balance checks.</p>
+        </div>
+      </div>
 
-<div class="project">
+      <!-- This Website -->
+      <div class="col-md-4">
+        <div class="card h-100 p-3">
+          <h3>This Website</h3>
+          <p>This personal portfolio website, hosted on GitHub, is built with HTML, CSS, and Bootstrap. It demonstrates my web development skills.</p>
+        </div>
+      </div>
 
-<h3>This Website</h3>
+    </div>
 
-<p>
-This website hosted on github and created by HTML, CSS, and a bootstrap is another example of my skills 
-</p>
+  </section>
 
-</div>
+  <!-- FOOTER -->
+  <footer class="text-center my-4">
+    <p>© 2026 Logan</p>
+    <p>Goran itadaki arigatō gozaimasu</p>
+    <p>ご覧いただきありがとうございます</p>
+  </footer>
 
-</section>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<footer>
-
-<p>© 2026 Logan</p>                                          <p>Goran itadaki arigatō gozaimasu</p><p>ご覧いただきありがとうございます</p>
-
-</footer>
+  <!-- Dark/Light Mode Script -->
+  <script>
+    const toggleBtn = document.getElementById('modeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+    });
+  </script>
 
 </body>
 
